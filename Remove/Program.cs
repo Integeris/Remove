@@ -48,7 +48,6 @@ namespace Remove
 
             if (properties.Help)
             {
-                // TODO: Вывод справки.
                 Console.WriteLine("""
                     Программа Remove может выполнить поиск или удаление файлов и файлов в указанной папке.
                     Синтиксис:
