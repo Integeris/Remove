@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Remove": {
+      "commandName": "Project",
+      "commandLineArgs": "/R /P \"^.*\\\\[Aa]ndroid\\\\.*\\.jar$\" \"E:\\\\\"",
+      "nativeDebugging": true
+    },
+    "Help": {
+      "commandName": "Project",
+      "commandLineArgs": "/?",
+      "nativeDebugging": true
+    }
+  }
+}
