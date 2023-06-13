@@ -2,12 +2,12 @@
   "profiles": {
     "Remove": {
       "commandName": "Project",
-      "commandLineArgs": "/R /P \"^.*\\\\[Aa]ndroid\\\\.*\\.jar$\" \"E:\\\\\"",
+      "commandLineArgs": "-r -p \"^.*\\.xml$\" \"D:\\\\Programs\\Integro\\InMeta\\EstateArh20\"",
       "nativeDebugging": true
     },
     "Help": {
       "commandName": "Project",
-      "commandLineArgs": "/?",
+      "commandLineArgs": "-h",
       "nativeDebugging": true
     }
   }

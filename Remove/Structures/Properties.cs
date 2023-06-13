@@ -120,13 +120,15 @@ namespace Remove.Structures
             {
                 switch (args[i].ToLower())
                 {
-                    case "/?":
+                    case "-h":
+                    case "--help":
                         help = true;
                         break;
-                    case "/mode":
+                    case "-m":
+                    case "--mode":
                         if (++i >= args.Length)
                         {
-                            throw new ArgumentNullException("/mode", "Отсутсвует режим для параметра.");
+                            throw new ArgumentNullException("--mode", "Отсутсвует режим для параметра.");
                         }
 
                         switch (args[i].ToLower())
@@ -139,21 +141,23 @@ namespace Remove.Structures
                                 throw new ArgumentException("Неизвестный режим праметра /mode.", args[i]);
                         }
                         break;
-                    case "/p":
+                    case "-p":
+                    case "--pattern":
                         if (++i >= args.Length)
                         {
-                            throw new ArgumentNullException("/p", "Отсутсвует паттерн для параметра.");
+                            throw new ArgumentNullException("--pattern", "Отсутсвует паттерн для параметра.");
                         }
 
                         pattern = args[i];
                         break;
-                    case "/d":
+                    case "-d":
                         searchDirectories = true;
                         break;
-                    case "/f":
+                    case "-f":
                         searchFiles = true;
                         break;
-                    case "/r":
+                    case "-r":
+                    case "--recursively":
                         recursively = true;
                         break;
                     default:

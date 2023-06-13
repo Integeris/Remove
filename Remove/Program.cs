@@ -42,7 +42,7 @@ namespace Remove
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex.Message}\nДля вывода спраки введите remove /?");
+                Console.WriteLine($"{ex.Message}\nДля вывода спраки введите remove -h");
                 return;
             }
 
@@ -51,17 +51,17 @@ namespace Remove
                 Console.WriteLine("""
                     Программа Remove может выполнить поиск или удаление файлов и файлов в указанной папке.
                     Синтиксис:
-                    remove [опции] [путь к директории]
+                    Remove [опции] [путь к директории]
 
                     Опции:
-                    /mode         Режим работы.
-                        find      Поиск файлов или папок.
-                        remove    Удаление файлов или папок.
-                    /p            Паттерн (регулярное выражение).
-                    /d            Поиск директорий.
-                    /f            Поиск файлов.
-                    /r            Рекурсивная работа программы.
-                    /?            Вывод справки.
+                    --mode (-m)         Режим работы.
+                        find            Поиск файлов или папок (по умолчанию).
+                        remove          Удаление файлов или папок.
+                    --pattern (-p)      Паттерн (регулярное выражение).
+                    -d                  Поиск директорий (по умолчанию, если не -f).
+                    -f                  Поиск файлов (по умолчанию, если не -d).
+                    --recursively -r    Рекурсивная работа программы.
+                    --help (-h)         Вывод справки.
                     """);
                 return;
             }
@@ -96,6 +96,10 @@ namespace Remove
             Console.WriteLine("\nПрограмма завершила своё выполнение.");
         }
 
+        /// <summary>
+        /// Проверка директории на наличие подходящих файлов.
+        /// </summary>
+        /// <param name="directoryInfo">Директория.</param>
         private static void CheckDirectory(DirectoryInfo directoryInfo)
         {
             try
