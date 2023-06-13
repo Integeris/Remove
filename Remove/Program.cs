@@ -54,7 +54,7 @@ namespace Remove
             {
                 Console.WriteLine(
                     """
-                    Программа Remove может выполнить поиск или удаление файлов и файлов в указанной папке.
+                    Программа Remove может выполнить поиск или удаление файлов и файлов в указанной папке с помощью регулярных выражений.
                     Синтиксис:
                     Remove [опции] [путь к директории]
 
@@ -82,6 +82,8 @@ namespace Remove
                     fileCommand = new ViewCommand();
                     break;
             }
+
+            Console.WriteLine("Начало выполнения программы.");
 
             DirectoryInfo directoryInfo = new DirectoryInfo(properties.DirectoryPath);
             CheckDirectory(directoryInfo);
