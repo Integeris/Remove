@@ -34,6 +34,10 @@ namespace Remove
         /// </summary>
         private static int filesCount;
 
+        /// <summary>
+        /// Точка входа в программу.
+        /// </summary>
+        /// <param name="args">Параметры запуска программы.</param>
         public static void Main(string[] args)
         {
             try
