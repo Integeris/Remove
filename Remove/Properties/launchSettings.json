@@ -2,7 +2,7 @@
   "profiles": {
     "Remove": {
       "commandName": "Project",
-      "commandLineArgs": "-r -p \"^.*\\.xml$\" \"D:\\\\Programs\\Integro\\InMeta\\EstateArh20\"",
+      "commandLineArgs": "-r -m remove -p \"^.*\\\\Development\\\\.*\\\\Rent\\.pdb$\" \"D:\\\\Programs\\Integro\\InMeta\\EstateArh20\"",
       "nativeDebugging": true
     },
     "Help": {

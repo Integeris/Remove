@@ -134,8 +134,10 @@ namespace Remove.Structures
                         switch (args[i].ToLower())
                         {
                             case "find":
+                                mode = Mode.Find;
                                 break;
                             case "remove":
+                                mode = Mode.Remove;
                                 break;
                             default:
                                 throw new ArgumentException("Неизвестный режим праметра /mode.", args[i]);
