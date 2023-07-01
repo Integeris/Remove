@@ -137,9 +137,9 @@ namespace Remove
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Не удаётся получить доступ к папке {directoryInfo.FullName}.");
             }
         }
     }

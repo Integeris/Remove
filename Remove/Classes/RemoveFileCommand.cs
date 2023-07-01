@@ -20,8 +20,15 @@ namespace Remove.Classes
         /// <param name="itemPath">Путь к файлу.</param>
         void ICommand.Execute(string itemPath)
         {
-            File.Delete(itemPath);
-            Console.WriteLine(itemPath);
+            try
+            {
+                File.Delete(itemPath);
+                Console.WriteLine(itemPath);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Не удаётся удалить файл {itemPath}", ex);
+            }
         }
     }
 }
