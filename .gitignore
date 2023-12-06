@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+#Publish folder
+[Pp]ublish/
+
 # User-specific files
 *.rsuser
 *.suo
@@ -392,3 +395,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Publish/Linux-x64/Remove
+/Publish/Win64/Remove.exe
+/Publish/Win86/Remove.exe
